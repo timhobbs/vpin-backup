@@ -30,7 +30,7 @@ For me, I already keep all my tables in a separate drive from my vpin, so I real
 
 This is the location where you wish to store the archivee backups. This should be a network location if possible to ensure the safety of the backups should anything happen to the drive in your vpin.
 
-## replaceInPath
+### replaceInPath
 
 This was added as a way to eliminate part ofd the file path from being stored in the archive. This is mainly for the situation where you are running the app from WSL and using `/mnt` as the location for accessing your files to backup. With this, you can remove `mnt/X` (where X is the Windows drive letter) and keep the archive contents tidy.
 
