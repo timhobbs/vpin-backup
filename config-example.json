@@ -9,5 +9,6 @@
         "V:\\Games\\VisualPinball\\VPinMAME\\DmdDevice.ini",
         "V:\\Games\\VisualPinball\\VPinMAME\\VPMAlias.txt"
     ],
-    "backupsFolder": "G:\\vpin\\_backups"
+    "backupsFolder": "G:\\vpin\\_backups",
+    "replaceInPath": "mnt/c/"
 }
