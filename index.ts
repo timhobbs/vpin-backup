@@ -72,7 +72,7 @@ const readGlob = (globPath) => {
 
 const createArchive = (config: Config, callback) => {
     // Create a file to stream archive data to.
-    const output = createWriteStream(`${config.backupsFolder}\\vpin-backup-${
+    const output = createWriteStream(`${config.backupsFolder}/vpin-backup-${
         new Date().toISOString().split('T')[0].replace(/-/g, '')
     }.zip`);
     const archive = archiver('zip', {
