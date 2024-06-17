@@ -274,3 +274,4 @@ dist
 *.vsix
 
 tmp/
+config.json
