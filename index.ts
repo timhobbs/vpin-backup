@@ -12,7 +12,7 @@ const createTmpDir = () => {
     mkdirSync('tmp');
 }
 
-const createFile = (filePath) => {
+const createFile = (filePath, replaceInPath = '') => {
     try {
         console.log(`***** filePath`, filePath);
 
@@ -23,7 +23,11 @@ const createFile = (filePath) => {
         const parsedPath: PathParsed = path.parse(filePath);
 
         // Remove root from the path and replace windows path slashes
-        const pathOnly = `./tmp/${parsedPath.dir.replace(parsedPath.root, '').replace(/\\/g, '/')}`;
+        const pathOnly = `./tmp/${parsedPath.dir
+            .replace(parsedPath.root, '')
+            .replace(/\\/g, '/')
+            .replace(replaceInPath, '')
+        }`;
         console.log(`***** filePath::pathOnly`, pathOnly);
 
         // Create path
@@ -51,7 +55,7 @@ const createDashedFile = (parsedPath, file) => {
     }
 }
 
-const readGlob = (globPath) => {
+const readGlob = (globPath, replaceInPath = '') => {
     try {
         // Fix windows paths - glob no likey!
         console.log(`***** globPath`, globPath);
@@ -63,7 +67,7 @@ const readGlob = (globPath) => {
 
         for (const file of files) {
             console.log(`***** globPath::file`, file);
-            createFile(file);
+            createFile(file, replaceInPath);
         }
     } catch (error) {
         console.error(`***** readGlob::error`, error);
@@ -143,13 +147,13 @@ const init = async () => {
 
             if (filePath.includes('*')) {
                 // Read glob files
-                readGlob(filePath);
+                readGlob(filePath, config.replaceInPath);
 
                 continue;
             }
 
             // Create the single file
-            createFile(filePath);
+            createFile(filePath, config.replaceInPath);
         }
 
         // Archive the files

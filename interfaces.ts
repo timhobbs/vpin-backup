@@ -9,4 +9,5 @@ export interface PathParsed {
 export interface Config {
     files: string[];
     backupsFolder: string;
+    replaceInPath?: string;
 }
