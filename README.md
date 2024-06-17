@@ -12,7 +12,7 @@ After getting nvm and node installed, you will then want to [clone this repo](ht
 
 ## How to use it
 
-Edit the `config.json` file with the paths for the files you wish to backup. The paths can use globbing to match folders and files and backup all files within the folders or all files that match the glob. This makes it realtively simple to backup entire folders of configs.
+Copy the `config-example.json` file to `config.json` and edit it with the paths for the files you wish to backup. The paths can use globbing to match folders and files and backup all files within the folders or all files that match the glob. This makes it realtively simple to backup entire folders of configs.
 
 Once you have the paths for everything setup, you will simply run:
 
