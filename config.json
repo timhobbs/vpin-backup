@@ -1,0 +1,13 @@
+{
+    "files": [
+        "V:\\Games\\DirectOutput\\Config\\*.xml",
+        "V:\\Games\\DirectOutput\\DOFLinx.ini",
+        "V:\\Games\\PinballY\\Databases\\**\\*.xml",
+        "V:\\Games\\VisualPinball\\Scripts\\*.vbs",
+        "V:\\Games\\VisualPinball\\Tables\\ScreenRes.txt",
+        "V:\\Games\\VisualPinball\\User\\*.*",
+        "V:\\Games\\VisualPinball\\VPinMAME\\DmdDevice.ini",
+        "V:\\Games\\VisualPinball\\VPinMAME\\VPMAlias.txt"
+    ],
+    "backupsFolder": "G:\\vpin\\_backups"
+}
